@@ -1,0 +1,57 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Pre-commit
+.pre-commit-cache/
+
+# Model artifacts (anything heavy lives in outputs/)
+*.h5
+*.pt
+*.pth
+*.pkl
+*.npz
+*.ckpt
+*.safetensors
+
+# Outputs directory — all per-run artifacts are regenerable, never committed
+outputs/
+
+# Local config or secrets
+*.local.yaml
+.secrets
+.envrc

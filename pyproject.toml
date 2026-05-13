@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mammo_sde"
+version = "0.1.0"
+description = "Generative models on mammogram embeddings for Latent SDE risk prediction (GMM + VAE variants)"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "Abhishek Jain", email = "abshkj247@gmail.com"}]
+keywords = [
+    "mammography",
+    "breast-cancer",
+    "variational-autoencoder",
+    "gaussian-mixture-model",
+    "latent-sde",
+    "representation-learning",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "h5py>=3.8",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "umap-learn>=0.5",
+    "scikit-learn>=1.3",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+    "pandas>=2.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pre-commit>=3.0",
+    "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/abj247/mammo-sde"
+Repository = "https://github.com/abj247/mammo-sde"
+Issues = "https://github.com/abj247/mammo-sde/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = [
+    "tests",
+    "outputs",
+    "notebooks",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+ignore = [
+    "E501",  # line length (handled by formatter)
+    "B008",  # mutable default args — used pragmatically in some places
+]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]  # script entry points may need imports after sys.path tweaks
+"__init__.py" = ["F401"]  # re-exports

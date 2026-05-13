@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Mammo_SDE: Generative Models on Mammogram Embeddings for Latent SDE Risk Prediction"
+authors:
+  - family-names: Jain
+    given-names: Abhishek
+    email: abshkj247@gmail.com
+type: software
+version: "0.1.0"
+date-released: "2026-05-13"
+repository-code: "https://github.com/abj247/mammo-sde"
+license: MIT
+abstract: >-
+  Phase 1 (Gaussian Mixture Model) and Phase 2 (three Variational Autoencoder
+  variants: Vanilla, sigma-VAE, VampPrior) of a longitudinal mammographic
+  risk prediction pipeline based on latent stochastic differential equations.
+  All models implemented from scratch in PyTorch. Encoder-agnostic design
+  supports Mammo-CLIP, Mammo-FM, and other ViT-style foundation models.
+keywords:
+  - mammography
+  - breast cancer risk prediction
+  - variational autoencoder
+  - gaussian mixture model
+  - latent stochastic differential equation
+  - representation learning
+references:
+  - type: article
+    authors:
+      - family-names: Kingma
+        given-names: Diederik P.
+      - family-names: Welling
+        given-names: Max
+    title: "Auto-Encoding Variational Bayes"
+    year: 2014
+    conference:
+      name: "International Conference on Learning Representations"
+  - type: article
+    authors:
+      - family-names: Tomczak
+        given-names: Jakub M.
+      - family-names: Welling
+        given-names: Max
+    title: "VAE with a VampPrior"
+    year: 2018
+    conference:
+      name: "Artificial Intelligence and Statistics (AISTATS)"
+  - type: article
+    authors:
+      - family-names: Rybkin
+        given-names: Oleh
+      - family-names: Daniilidis
+        given-names: Kostas
+      - family-names: Levine
+        given-names: Sergey
+    title: "Simple and Effective VAE Training with Calibrated Decoders"
+    year: 2021
+    conference:
+      name: "International Conference on Machine Learning (ICML)"
