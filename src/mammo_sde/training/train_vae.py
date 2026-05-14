@@ -116,7 +116,7 @@ def train_vae(
 
         if logger is not None and (epoch % log_every == 0 or epoch == epochs - 1):
             logger.metric(
-                f"Epoch {epoch+1}/{epochs}",
+                f"Epoch {epoch + 1}/{epochs}",
                 f"β={beta:.3f}  train: tot={train_total:.3f} recon={train_recon:.3f} KL={train_kl:.3f}  "
                 f"val: tot={val_total:.3f} recon={val_recon:.3f} KL={val_kl:.3f}",
             )
