@@ -359,19 +359,7 @@ The pre-commit configuration intentionally excludes the test suite for low commi
 
 ---
 
-## Citation
 
-If you use this code, please cite:
-
-```bibtex
-@software{mammo_sde_2026,
-  author  = {Jain, Abhishek},
-  title   = {Mammo\_SDE: Generative Models on Mammogram Embeddings for Latent SDE Risk Prediction},
-  year    = {2026},
-  url     = {https://github.com/abj247/mammo-sde},
-  version = {0.1.0}
-}
-```
 
 GitHub will also surface this via the "Cite this repository" button using the `CITATION.cff` file at the repository root.
 
