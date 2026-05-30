@@ -1,4 +1,4 @@
-# Mammo_SDE: Generative Models on Mammogram Embeddings for Latent SDE Risk Prediction
+# Generative Models on Mammogram Embeddings for Latent Risk Prediction
 
 **Status:** Phase 1 (Gaussian Mixture Model) and Phase 2 (three Variational Autoencoder variants) implemented from scratch in PyTorch. 21 unit tests passing. Verified end-to-end on synthetic data.
 
